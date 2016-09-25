@@ -1,6 +1,9 @@
 package com.example.boombz.myapplication.Service;
 
-import com.example.boombz.myapplication.Alertas.EstradasResponse;
+import com.example.boombz.myapplication.Models.Estrada;
+import com.example.boombz.myapplication.Models.EstradasResponse;
+
+import java.util.List;
 
 import retrofit.Call;
 import retrofit.http.GET;
@@ -12,5 +15,5 @@ public interface EstradasService {
 
 
     @GET("Estradas")
-    Call<EstradasResponse> listEstradas();
+    Call<List<Estrada>> listEstradas();
 }

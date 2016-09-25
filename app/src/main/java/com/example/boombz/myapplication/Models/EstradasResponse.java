@@ -1,6 +1,5 @@
-package com.example.boombz.myapplication.Alertas;
+package com.example.boombz.myapplication.Models;
 
-import com.example.boombz.myapplication.Models.Estrada;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.annotations.SerializedName;
@@ -13,13 +12,12 @@ import java.util.List;
  */
 public class EstradasResponse {
 
+    @SerializedName("estradas")
     private List<Estrada> estradas;
-
 
 
     public EstradasResponse(){
         estradas = new ArrayList<Estrada>();
-
     }
 
     public static EstradasResponse parseJSON(String response) {
@@ -28,4 +26,11 @@ public class EstradasResponse {
         return EstradasResponse;
     }
 
+    public List<Estrada> getEstradas() {
+        return estradas;
+    }
+
+    public void setEstradas(List<Estrada> estradas) {
+        this.estradas = estradas;
+    }
 }

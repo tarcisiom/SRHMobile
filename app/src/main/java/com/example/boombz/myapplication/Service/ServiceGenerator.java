@@ -29,7 +29,7 @@ import retrofit.Retrofit;
 public class ServiceGenerator {
 
     //private static final String BASE_URL = "http://192.168.1.90:3000/api/";
-    private static final String IP_ADDRESS = "192.168.1.3";
+    private static final String IP_ADDRESS = "192.168.1.4";
     private static final String BASE_URL = "http://"+IP_ADDRESS+":3000/api/";
 
     private static OkHttpClient httpClient = new OkHttpClient();

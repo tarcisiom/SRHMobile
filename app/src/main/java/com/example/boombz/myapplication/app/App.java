@@ -5,10 +5,12 @@ import android.content.Context;
 import android.net.wifi.WifiManager;
 import android.util.Log;
 
+import com.example.boombz.myapplication.Models.Temperatura;
 import com.example.boombz.myapplication.Models.User;
 import com.example.boombz.myapplication.Service.EstradasService;
 import com.example.boombz.myapplication.Service.LoginService;
 import com.example.boombz.myapplication.Service.ServiceGenerator;
+import com.example.boombz.myapplication.Service.TemperaturasService;
 import com.example.boombz.myapplication.Service.UserService;
 
 import java.math.BigInteger;
@@ -23,6 +25,7 @@ public class App extends Application {
     private static LoginService loginService;
     private static UserService userService;
     private static EstradasService estradasService;
+    private static TemperaturasService temperaturasService;
 
 
     public static User currentUser;
@@ -39,7 +42,7 @@ public class App extends Application {
 
         loginService = ServiceGenerator.createService(LoginService.class);
         estradasService = ServiceGenerator.createService(EstradasService.class);
-
+        temperaturasService = ServiceGenerator.createService(TemperaturasService.class);
     }
 
 
@@ -70,5 +73,9 @@ public class App extends Application {
 
     public static EstradasService getEstradasService() {
         return estradasService;
+    }
+
+    public static TemperaturasService getTemperaturasService() {
+        return temperaturasService;
     }
 }
